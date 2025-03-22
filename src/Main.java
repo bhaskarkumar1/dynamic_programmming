@@ -19,6 +19,18 @@ public class Main {
         boolean topdown=subset.topDownIsSubset(arr1,9,arr1.length);
         System.out.println("topDownfunc is arr1 have subset with given sum  ? : "+topdown);
 
+        //equal sum partition
+//        int[] arr4= {1, 5, 11, 5};
+        int[] arr4={1, 3, 5};
+        EqualPartitionSum eq=new EqualPartitionSum();
+        boolean eqs=eq.solve(arr4);
+        System.out.println("Is it have equal sum partition ? "+ eqs);
+        boolean eqsMemo=eq.MemoEqualSumPartition(arr4);
+        System.out.println("memoFunc Is it have equal sum partition  ? "+ eqsMemo);
 
+        boolean eqsBottomUp=eq.bottomUpEqualPartition(arr4);
+        System.out.println("bottomUpFunc Is it have equal sum partition  ? "+ eqsBottomUp);
     }
+
+
 }
